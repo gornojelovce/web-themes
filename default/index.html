@@ -1,0 +1,241 @@
+<!-- Default CSS applied htmls tags -->
+<!-- Elements and attributes featured here were found on https://www.w3schools.com -->
+
+<!-- Global Attributes
+    accesskey="key"     Advisable to not use
+    class="classname(s)"
+    data-*="value"      Custom data private to page or application
+    dir="ltr|rtl|auto"
+    draggable="true|false|auto"
+    enterkeyhint="done|enter|go|next|previous|search|send" Specify text/symbol for the enter button on virtual keyboards
+    hidden
+    id="id"
+    inert               diable a section and all elements inside it
+    inputmode="decimal|email|none|numeric|search|tel|text|url"  Change input mode on a virtual keyboard
+    lang="langauge_code"
+    popover             placed on top of other elements
+    spellcheck="true|false"
+    style="style_definitions"   Inline CSS
+    tabindex="number"
+    title="text"        Show a tooltip showing this text
+    translate="yes|no"
+-->
+
+<!-- Event Attributes
+    Window Event
+        onafterprint
+        onbeforeprint
+        onbeforeunload  When page is about to be closed
+        onerror         Supports <img>, <input type="image">, <object>, <link>, and <script>
+        onhashchange
+        onload
+        onmessage
+        onoffline
+        ononline
+        onpagehide
+        onpageshow
+        onpopstate
+        onresize
+        onstorage
+        onunload
+    Form Events
+        onblur
+        onchange
+        oncontextmenu
+        onfocus
+        oninput
+        oninvalid
+        onreset
+        onsearch    when the user writes something in a search field
+        onselect
+        onsubmit
+    Keyboard Events
+        onkeydown
+        onkeypress
+        onkeyup
+    Mouse Events
+        onclick
+        ondblclick  On double click
+        onmousedown
+        onmousemove
+        onmouseout
+        onmouseover
+        onmouseup
+        onmousewheel    Deprecated
+        onwheel
+    Drag Events
+        ondrag
+        ondragend
+        ondragenter
+        ondragleave
+        ondragover
+        ondragstart
+        ondrop
+        onscroll
+    Clipboard Events
+        oncopy
+        oncut
+        onpast
+    Media Events
+        onabort
+        oncanplay   When media is ready to play
+        oncanplaythrough    When media can be played to the end without buffering
+        oncuechange
+        ondurationchange
+        onemptied   When file becomes suddenly unavailable
+        onended     When media has ended playing
+        onerror
+        onlaodeddata
+        onloadedmetadata
+        onlaodstart
+        onpause
+        onplay      When media is ready to play
+        onplaying
+        onprogress
+        onratechange
+        onseeked
+        onseeking
+        onstalled   When media data cannot be fetched
+        onsuspend   Media fetching completely stops before it is completely loaded
+        ontimeupdate    When playing position changes
+        onvolumechange
+        onwaiting
+    Misc Events
+        ontoggle    
+
+
+
+-->
+
+
+<!DOCTYPE html> <!-- <!DOCTYPE> Declaration -->
+<html lang="en"> <!-- Attribute xmlns="http://www.w3.org/1999/xhtml" -->
+<head> <!-- allowed inside : <title> <style> <base> <link> <meta> <script> <noscript> -->
+    <title>Default Theme (No CSS)</title>
+    <style></style> <!-- CSS -->
+    <!-- <base href="https://gornojelovce.github.io/web-themes/"> -->
+    <!-- <link>
+    Attributes
+        crossorigin="anonymous|user-credential"
+        href="URL"
+        hreflang="language_code"
+        media="media_query"
+        referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+        rel="alternate|author|bookmark|external|help|license|next|nofollow|noreferrer|noopener|prev|search|tag" Relation between current document and linked document
+        sizes="HeightxWidth|any"    Only for rel="icon"
+        title="text"
+        type="media_type"
+    -->
+    <!-- METADATA Attribute
+        charset="character_set"
+        content="text"  Content for name or http-equiv attribute
+        http-equiv="content-security-policy|content-type|default-style|refresh"
+        name="application-name|author|description|generator|keywords|viewport"
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script></script> <!-- JavaScript
+    Attributes
+        async   Specifies that the script is downloaded in parallel to parsing the page, and executed as soon as it is available
+        crossorigin="anonymous|user-credential"
+        defer   Specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing
+        integrity="filehash"
+        nomudule="True|False"
+        referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+        src="URL"
+        type="scripttype"
+    -->
+        <noscript></noscript> <!-- For users who have disbled JavaScript -->
+</head>
+
+<body>
+    <header>
+        <h1>Default Theme</h1> <!-- h1-h6 -->
+        <p>This is the page header</p>
+    </header>
+
+    <nav>
+        <p>This is a navigation menu</p>
+        <!-- HYPERLINK
+        Attributes
+            download="filename"    
+            href="URL"
+            hreflang="language_code"    Language of linked content
+            media="media_query"
+            ping="list_of_URLs"
+            referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+            rel="alternate|author|bookmark|external|help|license|next|nofollow|noreferrer|noopener|prev|search|tag" Relation between current document and linked document
+            target="_blank|_self|_parent|_top|framename"    Where to open the link
+            type="media_type"   http://www.iana.org/assignments/media-types/media-types.xhtml
+        -->
+        <a href="/">Home</a>
+        <!-- ABBREVIATION
+            acronym is discontinued
+        -->
+        <abbr title="World Wide Web">WWW</abbr>
+    </nav>
+
+    <aside>
+        <h2>Aside</h2>
+        <p>Just something on the side.</p>
+    </aside>
+
+    <main>
+        <h2>Main</h2>
+        <p>This is the main part.</p>
+        <section>
+            <h2>A Section on Images and Maps</h2>
+            <!-- IMAGE
+            Attributes
+                alt="text"
+                crossorigin="anonymous|user-credential"
+                height="pixels"
+                ismap
+                loading="eager|lazy"
+                longdesc="URL"  Description for image
+                referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+                sizes="sizes"
+                usemap="#mapname"
+                width="pixels"
+            -->
+            <img src="cat.jpg" alt="Cat" height="250" width="auto" usemap="#catmap">
+            <!-- MAP Attribute : name="mapname" -->
+            <map name="catmap">
+                <!-- AREA
+                Attributes
+                    alt="text"
+                    coords="coordinates"
+                    downlaod="filename"
+                    href="URL"
+                    hreflang="language_code"
+                    media="media_query"
+                    referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+                    rel="alternate|author|bookmark|external|help|license|next|nofollow|noreferrer|noopener|prev|search|tag" Relation between current document and linked document
+                    shape="default|rect|circle|poly"
+                    target="_blank|_parent|_self|_top|framename"
+                    type="media_type"
+                -->
+                <area shape="rect" coords="0,0,200,250  " href="cat1.html" alt="Cat 1">
+                <area shape="rect" coords="200,0,400,500" href="cat2.html" alt="Cat 2">
+            </map>
+            <article>
+                <h3>An Article on Cats</h3>
+                <p>Cats are cute.</p>
+            </article>
+        </section>
+        <section>
+            <h2>A Section on Audio</h2>
+        </section>
+    </main>
+
+    <footer>
+        <h2>The Footer</h2>
+        <!-- ADDRESS -->
+        <p>My address</p>
+        <address>
+            Written by Me.<br>
+            Visit me
+        </address>
+    </footer>
+</body>
+</html>
