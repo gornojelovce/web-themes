@@ -183,48 +183,218 @@
     <main>
         <h2>Main</h2>
         <p>This is the main part.</p>
+        <!-- Text related tags -->
         <section>
-            <h2>A Section on Images and Maps</h2>
-            <!-- IMAGE
+            <h2>A Section on Text</h2>
+            <p>Text can be <b>bolded</b>, <em>emphasized</em>, <strong>made strong</strong>, <mark>marked</mark>.</p> <!-- PARAGRAPH -->
+            <p>Bi-directional text can be handled as <bdi>إيان</bdi>.</p>
+            <!-- BI-DIRECTIONAL OVERRIDE
             Attributes
-                alt="text"
-                crossorigin="anonymous|user-credential"
-                height="pixels"
-                ismap
-                loading="eager|lazy"
-                longdesc="URL"  Description for image
-                referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
-                sizes="sizes"
-                usemap="#mapname"
-                width="pixels"
+                dir="ltr|rtl" 
             -->
-            <img src="cat.jpg" alt="Cat" height="250" width="auto" usemap="#catmap">
-            <!-- MAP Attribute : name="mapname" -->
-            <map name="catmap">
-                <!-- AREA
+            <bdo dir="rtl">
+                This text goes from right to left.
+            </bdo>
+            <!-- QUOTES
+            Attributes
+                cite="URL" 
+            -->
+            <h3>Quotation and quotes</h3>
+            <blockquote cite="https://www.wikipedia.org/">
+                Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.
+            </blockquote>
+            <p>This <q>paragraph</q> was found on Wikipedia.</p>
+            <!-- LINE BREAKS -->
+            <p>Line<br>breaks can also be added.</p>
+        </section>
+        <!-- Form and button related tags -->
+        <section>
+            <h2>A Section on Forms</h2>
+            <!-- FORM
+            Attibutes
+                accept-charset="character_set"
+                action="URL"    Where to send the form-data
+                autocomplete="on|off"
+                enctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
+                method="get|post"
+                name="text"
+                novalidate      Form should no be validated when submitted
+                rel="external|help|license|next|nofollow|nopener|noreferrer|opener|prev|search"
+                target="_blank|_self|_parent|_top"
+            -->
+            <form action="">
+                <!-- INPUT
                 Attributes
+                    accept="file_extension|audio/*|video/*|image/*|media_type"
                     alt="text"
-                    coords="coordinates"
-                    downlaod="filename"
-                    href="URL"
-                    hreflang="language_code"
-                    media="media_query"
-                    referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
-                    rel="alternate|author|bookmark|external|help|license|next|nofollow|noreferrer|noopener|prev|search|tag" Relation between current document and linked document
-                    shape="default|rect|circle|poly"
-                    target="_blank|_parent|_self|_top|framename"
-                    type="media_type"
+                    autocomplete="on|off"
+                    autofocus
+                    checked
+                    dirname="inputname.dir"     Text direction should be submitted
+                    disbled
+                    form="form_id"
+                    formaction="URL"
+                    formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
+                    formmethod="get|post"
+                    formnovalidate
+                    formtarget="_blank|_self|_parent|_top|framename"
+                    height="pixels"
+                    list="datalist_id"
+                    max="number|date"
+                    maxlength="number"
+                    min="number|date"
+                    minlength="number"
+                    multiple
+                    name="text"
+                    pattern="regexp"
+                    placeholder="text"
+                    popovertarget="element_id"
+                    popovertargetaction="hide|show|toggle"
+                    readonly
+                    required
+                    size="number"
+                    src="URL"   Image to use for submit button
+                    step="number|any"
+                    type="button|checkbox|color|date|datetime-local|email|file|hidden|image|month|number|password|radio|range|reset|search|submit|tel|text|time|url|week"
+                    value="text"
+                    width="pixels"
                 -->
-                <area shape="rect" coords="0,0,200,250  " href="cat1.html" alt="Cat 1">
-                <area shape="rect" coords="200,0,400,500" href="cat2.html" alt="Cat 2">
-            </map>
+                <input type="button" value="A button">
+                <input type="checkbox" name="Ckeck" id="check">
+                <input type="color">
+                <input type="date">
+                <input type="datetime-local" name="Datetime" id="date-time">
+                <input type="email" name="email" id="email" placeholder="email">
+                <input type="file" name="File" id="file" accept="image/*">
+                <input type="hidden" name="Hidden">
+                <input type="image" src="flower.gif" alt="Flower" width="50px">
+                <input type="month" name="Month" id="month" placeholder="month">
+                <input type="number" name="Number" id="number" placeholder="number">
+                <input type="password" name="Password" id="password" placeholder="password">
+                <input type="radio" name="Radio" id="radio">
+                <input type="range" name="Range" id="range">
+                <input type="reset" value="Reset">
+                <input type="search" name="Search" id="search" placeholder="search">
+                <input type="submit" value="Submit">
+                <input type="tel" name="Telephone" id="telephone" placeholder="telephone">
+                <input type="text" name="Text" id="text" placeholder="text">
+                <input type="time" name="Time" id="time">
+                <input type="url" name="URL" id="url" placeholder="URL">
+                <input type="week" name="Week" id="week" placeholder="week">
+            </form>
+
+            <!-- BUTTON
+            Attributes
+                autofocus
+                disabled
+                form="form_id"
+                formaction="URL"    Specifies where to send the data
+                formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
+                formmethod="get|post"
+                formtarget="_blank|_self|_parent|_top|framename"
+                popovertarget="element_id"
+                popovertargetaction="hide|show|toggle"
+                name="name"
+                type="button|reset|submit"
+                value="text"
+            -->
+            <button type="button">Click Me</button>
+            <button type="button"><img src="flower.gif" alt="Flowers" height="50"></button>
+        </section>
+        <!-- Image related tags -->
+        <section>
+            <h2>A Section on Images</h2>
+            <figure>
+                <picture> <!-- can be used to specify different sources for image based on-->
+                    <!-- SOURCE
+                    Attributes
+                        media="media_query"
+                        sizes=""    Image sizes for different page layouts
+                        src="URL"
+                        srcset="URL"    Used when used inside <picture>
+                        type="MIME-type"
+                    -->
+                    <source media="(min-width: 1050px)" srcset="cat-big.jpg" type="image/JPEG">
+                    <source media="(min-width: 450px)" srcset="cat-alt.jpg" type="image/JPEG">
+                    <!-- IMAGE supports JPEG, PNG, GIF, WebP,SVG, AVIF, APNG, ICO
+                    Attributes
+                        alt="text"
+                        crossorigin="anonymous|user-credential"
+                        height="pixels"
+                        ismap
+                        loading="eager|lazy"
+                        longdesc="URL"  Description for image
+                        referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+                        sizes="sizes"
+                        usemap="#mapname"
+                        width="pixels"
+                    -->
+                    <img src="cat-small.jpg" alt="Cat" height="250" width="auto" usemap="#catmap">
+                    <!-- MAP Attribute : name="mapname" -->
+                    <map name="catmap">
+                        <!-- AREA
+                        Attributes
+                            alt="text"
+                            coords="coordinates"
+                            downlaod="filename"
+                            href="URL"
+                            hreflang="language_code"
+                            media="media_query"
+                            referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"
+                            rel="alternate|author|bookmark|external|help|license|next|nofollow|noreferrer|noopener|prev|search|tag" Relation between current document and linked document
+                            shape="default|rect|circle|poly"
+                            target="_blank|_parent|_self|_top|framename"
+                            type="media_type"
+                        -->
+                        <area shape="rect" coords="0,0,200,250  " href="https://en.wikipedia.org/wiki/Cat" alt="Cat">
+                        <area shape="rect" coords="200,0,400,250" href="https://en.wikipedia.org/wiki/Wall" alt="Wall">
+                    </map>
+                </picture>   
+                <figcaption>A cute house cat.</figcaption> 
+            </figure>
             <article>
-                <h3>An Article on Cats</h3>
-                <p>Cats are cute.</p>
+                <h3>An Article on Images and Maps</h3>
+                <p>Images can be kept inside figures to add captions.</p>
+                <p>Different sources can be specified for an image according to media queries. Try zooming in or out the page, or view on a different device.</p>
+                <p>Maps are used to add links to different parts of an image. For example, the left side of this image links to the Wikipedia article on Cats and the right side links to the Wikipedia article on Walls.</p>
             </article>
         </section>
+        <!-- Audio related tags -->
         <section>
             <h2>A Section on Audio</h2>
+            <!-- AUDIO supports MP3, WV, OGG
+            Attributes
+                autoplay
+                controls
+                loop
+                muted
+                preload="auto|metadata|none"
+                src="URL"
+            -->
+            <audio controls loop>
+                <source src="gospel-choir.webm" type="audio/webm">
+                <source src="gospel-choir.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+        <!-- Video related tags -->
+        <section>
+            <h2>A Section on Video</h2>
+            <!-- VIDEO supports MP3, WebM, OGG
+            Attributes
+                autoplay
+                controls
+                height="pixels"
+                loop
+                muted
+                poster="URL"    Thumbnail for video
+                preload="auto|metadata|none"
+                src="URL"
+                width="pixels"
+            -->
+            <video width="500px" height="auto" controls>
+                <source src="bird.webm" type="video/webm">
+                <source src="bird.mp4" type="video/mp4">
+            </video>
         </section>
     </main>
 
