@@ -206,6 +206,25 @@
             <p>This <q>paragraph</q> was found on Wikipedia.</p>
             <!-- LINE BREAKS -->
             <p>Line<br>breaks can also be added.</p>
+            <!-- CITATION -->
+            <p>Works can be cited as; <cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+            <!-- CODE -->
+            <p>The HTML <code>code</code> tag is used to define text as computer code.</p>
+            <!-- SAMPLE OUTPUT -->
+            <p>An example of computer output:</p>
+            <p><samp>File not found.</samp></p>
+            <!-- KEYBOARD INPUT -->
+            <p>Press <kbd>Ctrl</kbd> + <kbd>F</kbd>.</p>
+            <!-- VARIABLE -->
+            <p>The perimeter of a square is 4<var>a</var>, where <var>a</var> is the side length of the square.</p>
+            <!-- PREFORMATTED TEXT -->
+            <p>Following text is preformatted:</p>
+            <pre>
+Text in a pre element
+It will appear as it is typed                in the source file
+with both white       space and line
+breaks.
+            </pre>
         </section>
         <!-- Form and button related tags -->
         <section>
@@ -223,83 +242,207 @@
                 target="_blank|_self|_parent|_top"
             -->
             <form action="">
-                <!-- INPUT
+                <!-- FIELDSET
                 Attributes
-                    accept="file_extension|audio/*|video/*|image/*|media_type"
-                    alt="text"
-                    autocomplete="on|off"
-                    autofocus
-                    checked
-                    dirname="inputname.dir"     Text direction should be submitted
-                    disbled
+                    disabled
                     form="form_id"
-                    formaction="URL"
-                    formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
-                    formmethod="get|post"
-                    formnovalidate
-                    formtarget="_blank|_self|_parent|_top|framename"
-                    height="pixels"
-                    list="datalist_id"
-                    max="number|date"
-                    maxlength="number"
-                    min="number|date"
-                    minlength="number"
-                    multiple
                     name="text"
-                    pattern="regexp"
-                    placeholder="text"
-                    popovertarget="element_id"
-                    popovertargetaction="hide|show|toggle"
-                    readonly
-                    required
-                    size="number"
-                    src="URL"   Image to use for submit button
-                    step="number|any"
-                    type="button|checkbox|color|date|datetime-local|email|file|hidden|image|month|number|password|radio|range|reset|search|submit|tel|text|time|url|week"
-                    value="text"
-                    width="pixels"
                 -->
-                <input type="button" value="A button">
-                <input type="checkbox" name="Ckeck" id="check">
-                <input type="color">
-                <input type="date">
-                <input type="datetime-local" name="Datetime" id="date-time">
-                <input type="email" name="email" id="email" placeholder="email">
-                <input type="file" name="File" id="file" accept="image/*">
-                <input type="hidden" name="Hidden">
-                <input type="image" src="flower.gif" alt="Flower" width="50px">
-                <input type="month" name="Month" id="month" placeholder="month">
-                <input type="number" name="Number" id="number" placeholder="number">
-                <input type="password" name="Password" id="password" placeholder="password">
-                <input type="radio" name="Radio" id="radio">
-                <input type="range" name="Range" id="range">
-                <input type="reset" value="Reset">
-                <input type="search" name="Search" id="search" placeholder="search">
-                <input type="submit" value="Submit">
-                <input type="tel" name="Telephone" id="telephone" placeholder="telephone">
-                <input type="text" name="Text" id="text" placeholder="text">
-                <input type="time" name="Time" id="time">
-                <input type="url" name="URL" id="url" placeholder="URL">
-                <input type="week" name="Week" id="week" placeholder="week">
-            </form>
+                <fieldset>
+                    <!-- INPUT
+                    Attributes
+                        accept="file_extension|audio/*|video/*|image/*|media_type"
+                        alt="text"
+                        autocomplete="on|off"
+                        autofocus
+                        checked
+                        dirname="inputname.dir"     Text direction should be submitted
+                        disbled
+                        form="form_id"
+                        formaction="URL"
+                        formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
+                        formmethod="get|post"
+                        formnovalidate
+                        formtarget="_blank|_self|_parent|_top|framename"
+                        height="pixels"
+                        list="datalist_id"
+                        max="number|date"
+                        maxlength="number"
+                        min="number|date"
+                        minlength="number"
+                        multiple
+                        name="text"
+                        pattern="regexp"
+                        placeholder="text"
+                        popovertarget="element_id"
+                        popovertargetaction="hide|show|toggle"
+                        readonly
+                        required
+                        size="number"
+                        src="URL"   Image to use for submit button
+                        step="number|any"
+                        type="button|checkbox|color|date|datetime-local|email|file|hidden|image|month|number|password|radio|range|reset|search|submit|tel|text|time|url|week"
+                        value="text"
+                        width="pixels"
+                    -->
+                    <input type="button" value="Click Me">
+                    <br>
+                    <!-- LABEL
+                    Attributes
+                        for="element_id"
+                        form="form_id" 
+                    -->
+                    <label for="check">I am a human</label>
+                    <input type="checkbox" name="Check" id="check">
+                    <br>
+                    <label for="color">My favorite color</label>
+                    <input list="colors" type="color" id="color" name="Color">
+                    <!-- DATALIST -->
+                    <datalist id="colors">
+                            <!-- OPTION
+                            Attributes
+                                disabled
+                                label="text"
+                                selected    should be preselected
+                                value="text"
+                            -->
+                        <option value="#ff0000">Red</option>
+                        <option value="#00ff00">Green</option>
+                        <option value="#0000ff">Blue</option>
+                    </datalist>
+                    <br>
+                    <label for="date">My favorite day</label>
+                    <input type="date" id="date" name="Date">
+                    <br>
+                    <label for="date-time">My favorite moment</label>
+                    <input type="datetime-local" name="Datetime" id="date-time">
+                    <br>
+                    <label for="email">My Email</label>
+                    <input type="email" name="email" id="email" placeholder="email">
+                    <br>
+                    <label for="file">My favorite image</label>
+                    <input type="file" name="File" id="file" accept="image/*">
+                    <br>
+                    <input type="hidden" name="Hidden">
+                    <input type="image" src="flower.gif" alt="Flower" width="50px">
+                    <br>
+                    <label for="month">My favorite month</label>
+                    <input type="month" name="Month" id="month" placeholder="month">
+                    <br>
+                    <label for="number">My lucky number</label>
+                    <input type="number" name="Number" id="number" placeholder="number">
+                    <br>
+                    <label for="password">My Password</label>
+                    <input type="password" name="Password" id="password" placeholder="password">
+                    <br>
+                    <input type="radio" name="Radio" id="radio">
+                    <label for="radio">Left</label>
+                    <input type="radio" name="Radio" id="radio2">
+                    <label for="radio2">Right</label>
+                    <br>
+                    <label for="range">Happiness meter</label>
+                    <input type="range" name="Range" id="range">
+                    <br>
+                    <input type="reset" value="Reset">
+                    <br>
+                    <label for="search">Search Query</label>
+                    <input list="searches" type="search" name="Search" id="search" placeholder="search">
+                    <datalist id="searches">
+                        <option value="cats">cats</option>
+                        <option value="dogs">dogs</option>
+                        <option value="hats">hats</option>
+                    </datalist>
+                    <br>
+                    <input type="submit" value="Submit">
+                    <br>
+                    <label for="telephone">Telephone number</label>
+                    <input type="tel" name="Telephone" id="telephone" placeholder="telephone">
+                    <br>
+                    <label for="text">My favorite word</label>
+                    <input type="text" name="Text" id="text" placeholder="text">
+                    <br>
+                    <label for="time">I wake up at</label>
+                    <input type="time" name="Time" id="time">
+                    <br>
+                    <label for="url">My favorite website</label>
+                    <input type="url" name="URL" id="url" placeholder="URL">
+                    <br>
+                    <label for="week">My favorite week</label>
+                    <input type="week" name="Week" id="week" placeholder="week">
+                    <br>
+                    <!-- TEXTAREA
+                    Attributes
+                        autofocus
+                        cols="number"
+                        dirname="textareaname.dir"  Specifies that the direction of the text are will be submitted
+                        disabled
+                        form="form_id"
+                        maxlength="number"
+                        name="text"
+                        placeholder="text"
+                        readonly
+                        required
+                        rows="number"
+                        wrap="hard|soft"
+                    -->
+                    <label for="textarea">I would like to say that...</label>
+                    <textarea name="Textarea" id="textarea"></textarea>
+                    <br>
+                    <!-- BUTTON
+                    Attributes
+                        autofocus
+                        disabled
+                        form="form_id"
+                        formaction="URL"    Specifies where to send the data
+                        formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
+                        formmethod="get|post"
+                        formtarget="_blank|_self|_parent|_top|framename"
+                        popovertarget="element_id"
+                        popovertargetaction="hide|show|toggle"
+                        name="name"
+                        type="button|reset|submit"
+                        value="text"
+                    -->
+                    <button type="button">Click Me</button>
+                    <button type="button"><img src="flower.gif" alt="Flowers" height="50"></button>
+                    <br>
+                    <!-- SELECT
+                    Attributes
+                        autofocus
+                        disabled
+                        form="form_id" 
+                        multiple
+                        name="name"
+                        required
+                        size="number"
+                    -->
+                    <label for="select">My favorite position in a queue</label>
+                    <select name="Select" id="select">
+                        <!-- OPTION GROUP
+                        Attributes
+                            disabled
+                            label="text" 
+                        -->
+                        <optgroup label="Beginning">
+                            <option value="first">First</option>
+                            <option value="second">Second</option>
+                            <option value="third">Third</option>
+                        </optgroup>
+                        <optgroup label="End">
+                            <option value="last">Last</option>
+                            <option value="second-last">Second Last</option>
+                        </optgroup>
+                    </select>
+                    <!-- OUTPUT
+                    Attributes
+                    for="element_id"
+                    form="form_id"
+                    name="name" 
+                    -->
+                    <output id="output"></output>
 
-            <!-- BUTTON
-            Attributes
-                autofocus
-                disabled
-                form="form_id"
-                formaction="URL"    Specifies where to send the data
-                formenctype="application/x-www-form-urlencoded|multipart/form-data|text/plain"
-                formmethod="get|post"
-                formtarget="_blank|_self|_parent|_top|framename"
-                popovertarget="element_id"
-                popovertargetaction="hide|show|toggle"
-                name="name"
-                type="button|reset|submit"
-                value="text"
-            -->
-            <button type="button">Click Me</button>
-            <button type="button"><img src="flower.gif" alt="Flowers" height="50"></button>
+                </fieldset>
+            </form>
         </section>
         <!-- Image related tags -->
         <section>
@@ -372,7 +515,6 @@
                 src="URL"
             -->
             <audio controls loop>
-                <source src="gospel-choir.webm" type="audio/webm">
                 <source src="gospel-choir.mp3" type="audio/mpeg">
             </audio>
         </section>
@@ -392,9 +534,96 @@
                 width="pixels"
             -->
             <video width="500px" height="auto" controls>
-                <source src="bird.webm" type="video/webm">
                 <source src="bird.mp4" type="video/mp4">
             </video>
+        </section>
+        <!-- Table related tags -->
+         <section>
+            <h2>A Section on Tables</h2>
+            <!-- TABLE -->
+            <table>
+                <!-- TABLE HEADER -->
+                <thead>
+                    <caption>Food Review</caption>
+                    <!-- COLUMN GROUP
+                    Attributes
+                        span="number"
+                    -->
+                    <colgroup>
+                        <!-- COLUMN 
+                        Attributes
+                            span="number"
+                        -->
+                        <col span="2">
+                        <col>
+                    </colgroup>
+                    <!-- TABLE ROW -->
+                    <tr>
+                        <!-- TABLE HEADER CELL
+                        Attributes
+                            abbr="text"
+                            colspan="number"
+                            headers="header_id"
+                            rowspan="number"
+                            scope="col|colgroup|row|rowgroup"
+                        -->
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Color</th>
+                        <th>Smell</th>
+                    </tr>
+                </thead>
+                <!-- TABLE BODY -->
+                <tbody>
+                    <tr>
+                        <!-- TABLE DATA CELL
+                        Attributes
+                            colspan="number"
+                            headers="header_id"
+                            rowspan="number" 
+                        -->
+                        <td>1.</td>
+                        <td>Ice Cream</td>
+                        <td>White</td>
+                        <td>Sweet</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Pizza</td>
+                        <td>Yellow</td>
+                        <td>Spicy</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Strawberry</td>
+                        <td>Red</td>
+                        <td>Sweet</td>
+                    </tr>
+                </tbody>
+                <!-- TABLE FOOTER -->
+                <tfoot>
+                    <tr>
+                        <td>Favorites</td>
+                        <td>Ice Cream</td>
+                        <td>Red</td>
+                        <td>Sweet</td>
+                    </tr>
+                </tfoot>
+            </table>
+         </section>
+        <!-- Canvas realted tags -->
+        <section>
+            <h2>A Section on Canvas</h2>
+            <!-- CANVAS
+            Attributes
+                height="pixels"
+                width="pixels" 
+            -->
+            <canvas height="100" width="100">Your browser does not support canvas.</canvas>
+            <article>
+                <h3>An Article on Canvas</h3>
+                <p>Canvas is used to draw graphics via scripting.</p>
+            </article>
         </section>
     </main>
 
