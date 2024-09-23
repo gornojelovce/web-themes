@@ -186,7 +186,17 @@
         <!-- Text related tags -->
         <section>
             <h2>A Section on Text</h2>
-            <p>Text can be <b>bolded</b>, <em>emphasized</em>, <strong>made strong</strong>, <mark>marked</mark>.</p> <!-- PARAGRAPH -->
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p><b>Bold Text</b></p>
+            <p><em>Emphasized Text</em></p>
+            <p><strong>Strong Text</strong></p>
+            <p><mark>Marked Text</mark></p>
+            <!-- PARAGRAPH -->
             <p>Bi-directional text can be handled as <bdi>إيان</bdi>.</p>
             <!-- BI-DIRECTIONAL OVERRIDE
             Attributes
@@ -205,7 +215,7 @@
             </blockquote>
             <p>This <q>paragraph</q> was found on Wikipedia.</p>
             <!-- LINE BREAKS -->
-            <p>Line<br>breaks can also be added.</p>
+            <p>Line<br>break</p>
             <!-- CITATION -->
             <p>Works can be cited as; <cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
             <!-- CODE -->
@@ -218,7 +228,6 @@
             <!-- VARIABLE -->
             <p>The perimeter of a square is 4<var>a</var>, where <var>a</var> is the side length of the square.</p>
             <!-- PREFORMATTED TEXT -->
-            <p>Following text is preformatted:</p>
             <pre>
 Text in a pre element
 It will appear as it is typed                in the source file
@@ -292,13 +301,13 @@ breaks.
                         for="element_id"
                         form="form_id" 
                     -->
-                    <label for="check">I am a human</label>
-                    <input type="checkbox" name="Check" id="check">
+                    <label for="check-box">I am a human</label>
+                    <input type="checkbox" name="Check" id="check-box">
                     <br>
-                    <label for="color">My favorite color</label>
-                    <input list="colors" type="color" id="color" name="Color">
+                    <label for="color-input"> Color</label>
+                    <input list="color-list" type="color-input" id="color" name="Color">
                     <!-- DATALIST -->
-                    <datalist id="colors">
+                    <datalist id="color-list">
                             <!-- OPTION
                             Attributes
                                 disabled
@@ -311,43 +320,46 @@ breaks.
                         <option value="#0000ff">Blue</option>
                     </datalist>
                     <br>
-                    <label for="date">My favorite day</label>
-                    <input type="date" id="date" name="Date">
+                    <label for="date-input">Date</label>
+                    <input type="date" id="date-input" name="Date">
                     <br>
-                    <label for="date-time">My favorite moment</label>
-                    <input type="datetime-local" name="Datetime" id="date-time">
+                    <label for="date-time-input">Datetime</label>
+                    <input type="datetime-local" name="Datetime" id="date-time-input">
                     <br>
-                    <label for="email">My Email</label>
-                    <input type="email" name="email" id="email" placeholder="email">
+                    <label for="email-input">Email</label>
+                    <input type="email" name="email" id="email-input" placeholder="email">
                     <br>
-                    <label for="file">My favorite image</label>
-                    <input type="file" name="File" id="file" accept="image/*">
+                    <label for="file-input">File</label>
+                    <input type="file" name="File" id="file-input" accept="image/*">
                     <br>
-                    <input type="hidden" name="Hidden">
-                    <input type="image" src="flower.gif" alt="Flower" width="50px">
+                    <label for="hidden-input">Hidden</label>
+                    <input type="hidden" name="Hidden" id="hidden-input">
+                    <br />
+                    <label for="image-input">Image</label>
+                    <input type="image" src="flower.gif" alt="Flower" width="50px" id="image-input">
                     <br>
-                    <label for="month">My favorite month</label>
-                    <input type="month" name="Month" id="month" placeholder="month">
+                    <label for="month-input">Month</label>
+                    <input type="month" name="Month" id="month-input" placeholder="month">
                     <br>
-                    <label for="number">My lucky number</label>
-                    <input type="number" name="Number" id="number" placeholder="number">
+                    <label for="number-input">Number</label>
+                    <input type="number" name="Number" id="number-input" placeholder="number">
                     <br>
-                    <label for="password">My Password</label>
-                    <input type="password" name="Password" id="password" placeholder="password">
+                    <label for="password-input">Password</label>
+                    <input type="password" name="Password" id="password-input" placeholder="password">
                     <br>
-                    <input type="radio" name="Radio" id="radio">
-                    <label for="radio">Left</label>
-                    <input type="radio" name="Radio" id="radio2">
-                    <label for="radio2">Right</label>
+                    <input type="radio" name="Radio" id="radio-input1">
+                    <label for="radio-input1">Left</label>
+                    <input type="radio" name="Radio" id="radio-input2">
+                    <label for="radio-input2">Right</label>
                     <br>
-                    <label for="range">Happiness meter</label>
-                    <input type="range" name="Range" id="range">
+                    <label for="range-input">Range</label>
+                    <input type="range" name="Range" id="range-input">
                     <br>
                     <input type="reset" value="Reset">
                     <br>
-                    <label for="search">Search Query</label>
-                    <input list="searches" type="search" name="Search" id="search" placeholder="search">
-                    <datalist id="searches">
+                    <label for="search-input">Search</label>
+                    <input list="search-list" type="search" name="Search" id="search-input" placeholder="search">
+                    <datalist id="search-list">
                         <option value="cats">cats</option>
                         <option value="dogs">dogs</option>
                         <option value="hats">hats</option>
@@ -355,20 +367,20 @@ breaks.
                     <br>
                     <input type="submit" value="Submit">
                     <br>
-                    <label for="telephone">Telephone number</label>
-                    <input type="tel" name="Telephone" id="telephone" placeholder="telephone">
+                    <label for="tel-input">Telephone</label>
+                    <input type="tel" name="Telephone" id="tel-input" placeholder="telephone">
                     <br>
-                    <label for="text">My favorite word</label>
-                    <input type="text" name="Text" id="text" placeholder="text">
+                    <label for="text-input">Text</label>
+                    <input type="text" name="Text" id="text-input" placeholder="text">
                     <br>
-                    <label for="time">I wake up at</label>
-                    <input type="time" name="Time" id="time">
+                    <label for="time-input">Time</label>
+                    <input type="time" name="Time" id="time-input">
                     <br>
-                    <label for="url">My favorite website</label>
-                    <input type="url" name="URL" id="url" placeholder="URL">
+                    <label for="url-input">URL</label>
+                    <input type="url" name="URL" id="url-input" placeholder="URL">
                     <br>
-                    <label for="week">My favorite week</label>
-                    <input type="week" name="Week" id="week" placeholder="week">
+                    <label for="week-input">Week</label>
+                    <input type="week" name="Week" id="week-input" placeholder="week">
                     <br>
                     <!-- TEXTAREA
                     Attributes
@@ -385,7 +397,7 @@ breaks.
                         rows="number"
                         wrap="hard|soft"
                     -->
-                    <label for="textarea">I would like to say that...</label>
+                    <label for="textarea">Textarea</label>
                     <textarea name="Textarea" id="textarea"></textarea>
                     <br>
                     <!-- BUTTON
@@ -416,7 +428,7 @@ breaks.
                         required
                         size="number"
                     -->
-                    <label for="select">My favorite position in a queue</label>
+                    <label for="select">Select</label>
                     <select name="Select" id="select">
                         <!-- OPTION GROUP
                         Attributes
